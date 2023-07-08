@@ -51,8 +51,33 @@ public class VariabelTipeData {
 
         //boolean merupakan tipe data yang berbeda dari yang lain dimana boolean sendiri adalah pernyataan benar (true) atau salah (false)
         boolean val=true;
-        System.out.println("Nilai boolean = " + val);
+        System.out.println("Nilai boolean = " + val+"\n\n");
 
 
+
+        // Operasi Aritmatika
+        System.out.println("Operasi Aritmatika :");
+        int var1 = 9;
+        int var2 = 4;
+
+        //1. Penjumlahan
+        int penjumlahan = var1 + var2;
+        System.out.printf("%d + %d = %d\n", var1, var2, penjumlahan);
+
+        //2. Pengurangan
+        int pengurangan = var1 - var2;
+        System.out.printf("%d - %d = %d\n", var1, var2, pengurangan);
+
+        //3. Perkalian
+        int perkalian = var1 * var2;
+        System.out.printf("%d * %d = %d\n", var1, var2, perkalian);
+
+        //4. Pembagian
+        int pembagian = var1/var2;
+        System.out.printf("%d / %d = %d\n", var1, var2, pembagian);
+
+        //5. Modulus
+        int modulus = var1 % var2;
+        System.out.printf("%d %% %d = %d\n", var1, var2, modulus);
     }
 }
