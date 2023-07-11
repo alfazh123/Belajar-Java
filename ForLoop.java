@@ -17,14 +17,15 @@ public class ForLoop {
         }
 
         //Nested Loop
-        int b=5,c=5;
 
+        int b=5,c=5;
         System.out.println("\n\nPerulangan Nested Loop Menggunakan For Loop");
 
         for (int i=0; i<b; i++){
             for (int j=0; j<c; j++){
-                System.out.printf("Nilai perulangan '%d','%d'\n",i,j);
+                System.out.printf("%d%d ",i,j);
             }
+            System.out.println();
         }
 
         // Hasil akhir dari program tersebut
@@ -36,6 +37,46 @@ public class ForLoop {
         //       20 21 22 23 24
         //       30 31 32 33 34
         //       40 41 42 43 44
+
+        System.out.print("\n\n");
+
+        //NestedLoop Persegi
+        for (int i=0; i<b; i++){
+            for (int j=0; j<c; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        System.out.print("\n\n");
+
+
+        //NestedLoop Segitiga siku2 kanan
+        for (int i=0; i<b; i++){
+            for (int j=0; j<c; j++){
+                System.out.print("* ");
+                if(j==i){
+                    j=c;
+                }
+            }
+            System.out.println();
+        }
+        System.out.print("\n\n");
+
+        //NestedLoop Segitiga
+        for (int i=0; i<b; i++){
+            for (int j=0; j<c; j++){
+                System.out.print("* ");
+                if(j==i){
+                    break;
+                } else if((i+j)==4){
+                    break;
+                }
+            }
+            System.out.println();
+        }
+        System.out.print("\n\n");
+
+
 
     }
 }
