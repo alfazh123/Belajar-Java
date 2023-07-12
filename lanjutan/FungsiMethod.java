@@ -2,7 +2,7 @@ package com.tutorial.lanjutan;
 
 import java.util.Scanner;
 
-public class FingsiMethod {
+public class FungsiMethod {
     public static void main(String[] args){
         //Menghitung luas persegi dengan fungsi
         int panjang,lebar,Luas;
