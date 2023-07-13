@@ -1,5 +1,7 @@
 package com.tutorial.lanjutan;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Arrays;
 public class OperasiArray {
     public static void main(String[] args) {
@@ -87,10 +89,79 @@ public class OperasiArray {
         System.out.println("angka " + angka + " ada di index " + posisi);
 
         // -->tugas sort kebalik
+        // sort terbalik
+        System.out.println("\nMembalik hasil sort");
+        int[] arrayAngka9 = {4,2,5,3,6,1};
+        printArray(arrayAngka9);
+        System.out.println(arrayAngka9);
+        membalikSort(arrayAngka9);
+        System.out.println(arrayAngka9);
+
         // operasi tambah antara dua array
+        System.out.println("\nMenambahkan dua array");
+        printArray(arrayAngka1);
+        System.out.println(arrayAngka1);
+        printArray(arrayAngka2);
+        System.out.println(arrayAngka2);
+        tambahArray(arrayAngka1,arrayAngka2); // fungsi ini tidak bisa dipakai jika panjang dari salah satu array ada yang lebih besar
+
         // menggabungkan dia buah array
+        System.out.println("\nMenggabungkan dua Array");
+        printArray(arrayAngka1);
+        System.out.println(arrayAngka1);
+        printArray(arrayAngka2);
+        System.out.println(arrayAngka2);
+        menggabungArrays(arrayAngka1,arrayAngka2);
     }
 
+    private static void menggabungArrays (int[] array1, int[] array2) {
+        int n = array1.length+array2.length;
+        int[] arrayGabung = new int[n];
+        int length2 = 0;
+
+        for (int i=0; i<array1.length; i++){
+            arrayGabung[i] = array1[i];
+        }
+
+        for (int i=array1.length; i<n; i++){
+            arrayGabung[i] = array2[length2];
+            length2++;
+        }
+
+        System.out.println(Arrays.toString(arrayGabung));
+        System.out.println(arrayGabung);
+    }
+
+    private static void tambahArray(int[] array1, int[] array2){
+        int n;
+
+        if (array1.length>=array2.length){
+            n=array1.length;
+        }else{
+            n=array2.length;
+        }
+        int[] hasilArray = new int[n];
+
+        for (int i=0; i<n; i++){
+            hasilArray[i] = array1[i] + array2[i];
+        }
+
+        System.out.println(Arrays.toString(hasilArray));
+        System.out.println(hasilArray);
+    }
+
+    private static void membalikSort(int[] array){
+        Arrays.sort(array);
+        int[] sortTerbalik = new int[array.length];
+        int n=array.length;
+
+        for (int i=0; i<array.length; i++){
+            sortTerbalik[i]=array[n-1];
+            n--;
+        }
+
+        System.out.println("array = "+Arrays.toString(sortTerbalik));
+    }
     public static void printArray(int[] dataArray){
         System.out.println("array = "+Arrays.toString(dataArray));
     }
