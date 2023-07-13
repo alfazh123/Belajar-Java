@@ -153,11 +153,9 @@ public class OperasiArray {
     private static void membalikSort(int[] array){
         Arrays.sort(array);
         int[] sortTerbalik = new int[array.length];
-        int n=array.length;
 
         for (int i=0; i<array.length; i++){
-            sortTerbalik[i]=array[n-1];
-            n--;
+            sortTerbalik[i]=array[(array.length-1)-i];
         }
 
         System.out.println("array = "+Arrays.toString(sortTerbalik));
